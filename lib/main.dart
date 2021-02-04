@@ -8,14 +8,14 @@ class BMI_app_body extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.dark().copyWith(
-          primaryColor: Color(0XFF0E1337),
+          primaryColor: Color(0XFF11163A),
           textTheme: TextTheme(
             // ignore: deprecated_member_use
               body1: TextStyle(
                   color: Colors.white
               )
           ),
-          scaffoldBackgroundColor: Color(0XFF0C1135),
+          scaffoldBackgroundColor: Color(0XFF0D1235),
       ),
       home: Body(), //--- makes our app multi screen
     );
