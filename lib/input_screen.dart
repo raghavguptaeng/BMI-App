@@ -40,6 +40,7 @@ class _BodyState extends State<Body> {
     }
     dataForProcessing[0] = gender;
   }
+
   // 1 = male and 0 = female
   void updateAge(int type) {
     if (type == 1) if (age > 99) {
@@ -54,6 +55,7 @@ class _BodyState extends State<Body> {
     }
     dataForProcessing[4] = age;
   }
+
   // 1 = male and 0 = female
   void updateWeight(int type) {
     if (type == 1)
@@ -212,6 +214,7 @@ class _BodyState extends State<Body> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               FloatingActionButton(
+                                heroTag: 'incw',
                                 onPressed: () {
                                   setState(() {
                                     updateWeight(1);
@@ -228,6 +231,7 @@ class _BodyState extends State<Body> {
                                 width: 25,
                               ),
                               FloatingActionButton(
+                                heroTag: 'decw',
                                 onPressed: () {
                                   setState(() {
                                     updateWeight(0);
@@ -264,6 +268,7 @@ class _BodyState extends State<Body> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               FloatingActionButton(
+                                heroTag: 'inca',
                                 onPressed: () {
                                   setState(() {
                                     updateAge(1);
@@ -280,6 +285,7 @@ class _BodyState extends State<Body> {
                                 width: 25,
                               ),
                               FloatingActionButton(
+                                heroTag: 'deca',
                                 onPressed: () {
                                   setState(() {
                                     updateAge(0);
@@ -303,10 +309,15 @@ class _BodyState extends State<Body> {
             ),
             // BMI calculate Button
             GestureDetector(
-              onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context){
-                  return tellBmi();
-                },),);
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return tellBmi();
+                    },
+                  ),
+                );
               },
               child: Container(
                 width: double.infinity,
@@ -329,6 +340,7 @@ class _BodyState extends State<Body> {
     );
   }
 }
+
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------

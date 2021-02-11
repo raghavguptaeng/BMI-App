@@ -12,3 +12,7 @@ const thickText = TextStyle(
     fontSize: 50,
     fontWeight: FontWeight.w900 // thickness of font
 );
+const thin = TextStyle(
+  fontSize: 25,
+  color: Colors.green,
+);
