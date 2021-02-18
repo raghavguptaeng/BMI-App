@@ -1,3 +1,4 @@
+import 'Brain.dart';
 import 'tellBmi.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -310,11 +311,12 @@ class _BodyState extends State<Body> {
             // BMI calculate Button
             GestureDetector(
               onTap: () {
+                Brain br = Brain(height: dataForProcessing[1],weight: dataForProcessing[3]);
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return tellBmi();
+                      return tellBmi(result:br.calculateBmi() ,inter:br.inter() ,resulttxt: br.result());
                     },
                   ),
                 );

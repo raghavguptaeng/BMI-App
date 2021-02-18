@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 import 'Constants.dart';
 
 class tellBmi extends StatelessWidget {
+  const tellBmi({this.resulttxt, this.result, this.inter});
+  final String resulttxt;
+  final String result;
+  final String inter;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,15 +35,15 @@ class tellBmi extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
-                        "Normal",
+                        resulttxt,
                         style: thin,
                       ),
                       Text(
-                        "56.6",
+                        result,
                         style: thickText,
                       ),
                       Text(
-                        "kadjfhksdjhfkshjdf",
+                        inter,
                         style: TextStyle(
                           fontSize: 20,
                         ),
