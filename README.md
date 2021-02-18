@@ -1,4 +1,4 @@
 # BMI Calculator App
-This Flutter App is used to calculate BMI d a person by taking minor details such as Gender , Height and age  
+This Flutter App is used to calculate BMI of a person by taking minor details such as Gender, Height, Weight and age  
 
 
